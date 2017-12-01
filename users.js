@@ -59,3 +59,13 @@ exports.AddNew = function(body){
   return 'Add new contacts complete';
  };
  
+ 
+ exports.EditContact = function(id,body){
+   let edit_contact = body;
+   let edit_id = id;
+
+   contacts[edit_contact] = edit_contact;
+   contacts[edit_id].id = edit_id;
+
+   return 'Edit complete';
+ }

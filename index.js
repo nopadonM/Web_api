@@ -34,6 +34,11 @@ app.post('/contacts',function(req,res){
     res.json(users.AddNew(contacts));
     
 });
+app.put('/contacts/:id',function(req,res){
+    let body = req.body;
+    let id = req.params.id;
+    res.json(users.EditContact(id,body))
+});
 
 app.listen(port,function(){
     console.log("Staring at port" + port);
