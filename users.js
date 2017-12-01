@@ -12,10 +12,11 @@ var contacts = [
   {id: 10, name: 'Brienne of Tarth', email: 'oathkeeper@gmail.com', phone: '123-456-7890', url: 'www.google.com', notes: 'Do not cross her.'},
   {id: 11, name: 'Petyr Baelish', email: 'petyr@baelishindustries.com', phone: '123-456-7890', url: 'www.google.com', notes: 'Do not trust anyone.'}
 ];
-
+//bank
 exports.findAll = function(){
   return contacts;
 };
+//bank
 exports.findById = function(myid) {
  let col = {}
  let s = 1;
@@ -31,6 +32,8 @@ exports.findById = function(myid) {
       return col;
   
 }; 
+
+//bank
 exports.findByName = function(myName){
   let col_1 = {}
   let a=1;
@@ -43,23 +46,6 @@ exports.findByName = function(myName){
    
    return col_1;     
 };
-exports.DeleteID = function(del_id){
-  contacts.splice(del_id,1);
-};
-exports.AddNew = function(body){
- let newContacts = body;
- newContacts.id = contacts.length;
- contacts.push(newContacts);
-  
- return 'Add new contacts complete';
-};
-exports.EditContact = function(id,body){
- let edit_contact =body;
- let edit_id = id;
- 
- contacts[edit_id] = edit_contact;
- contacts[edit_id].id = edit_id;
- 
- return 'Edit complete';
-};
+
+
  
