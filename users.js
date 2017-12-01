@@ -46,6 +46,9 @@ exports.findByName = function(myName){
    
    return col_1;     
 };
-
+//nan
+exports.DeleteID = function(del_id){
+  contacts.splice(del_id,1);
+};
 
  

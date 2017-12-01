@@ -23,9 +23,17 @@ app.get('/contacts/name/:name',function(req,res){
     var name = req.params.name;
     res.json(users.findByName(name));
 });
+
+app.delete('/contacts/:id',function(req,res){
+    let del_id = req.params.id;
+    res.json(users.DeleteID(del_id));
+    console.log("Just Delete ID:" + del_id);
+});
 app.listen(port,function(){
     console.log("Staring at port" + port);
 })
+
+
 
 
 
