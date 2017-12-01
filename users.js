@@ -51,4 +51,11 @@ exports.DeleteID = function(del_id){
   contacts.splice(del_id,1);
 };
 
+exports.AddNew = function(body){
+  let newContacts = body;
+  newContacts.id = contacts.length;
+  contacts.push(newContacts);
+   
+  return 'Add new contacts complete';
+ };
  

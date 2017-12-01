@@ -29,6 +29,12 @@ app.delete('/contacts/:id',function(req,res){
     res.json(users.DeleteID(del_id));
     console.log("Just Delete ID:" + del_id);
 });
+app.post('/contacts',function(req,res){
+    let contacts = req.body;
+    res.json(users.AddNew(contacts));
+    
+});
+
 app.listen(port,function(){
     console.log("Staring at port" + port);
 })
